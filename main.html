@@ -1,0 +1,40 @@
+<section ng-controller= "loginCtrl">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+			   	<h1>Cloud-Enabled Agents</h1>
+			    
+			    <p>With cloud based agents you can manage agent machines that are never on the same network as your console.
+			    <p class="inbox2">Your agents can check in and receive policy updates from the cloud, and you can install an agent using the cloud.</p>
+			</div>
+			<div class="col-sm-4 inbox">
+			  	<div class="form-group">
+			      	<div class="input-group">
+			      		<h3>Sign In</h3>
+			      	</div>
+		            <div class="input-group">
+		              	<input type="text" class="form-control" name="username" placeholder="Username" ng-model="email" required="required">        
+		            </div>
+		        </div>
+
+		        <div class="form-group">
+            		<div class="input-group">
+              			<input type="password" class="form-control" name="password" placeholder="Password" ng-model="password" required="required">       
+            		</div>
+          		</div>  
+          		<div class="form-group">
+            		<button type="submit" ng-click="loginFunction()" class="btn btn-primary login-btn btn-block" style="background-color:#87CEFA;">Sign in</button>
+          		</div>
+
+          		<div class="form-group">
+			    	<div class="input-group">
+			      		<p>Forgot your password?</p>
+			      		<p>Complete password Reset (For testing only)</p>
+			      		<p>Don't have an account yet. Register now.</p>
+			      	</div>
+				</div>
+	    	</div>
+	    </div>
+	</div>
+			
+</section>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Verti by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+
+		<!-- CSS only -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+		<!-- JavaScript Bundle with Popper -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+		<script src="https://code.angularjs.org/1.6.9/angular.js"></script>
+		<script src="https://code.angularjs.org/1.6.9/angular-route.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+
+	<body ng-app="myApp">
+		<header id="header">
+			<div class="row">
+				<div class="col-sm-6">
+					<a class="col-sm-3">
+						<img class="logo" src="img/logo.png">
+					</a>
+				</div>
+				<div class="col-sm-6" id="usernav" style="display: none;" ng-controller= "logoutCtrl">
+					<nav class="usernav" id="myusernav">
+					  	<a ng-click="logoutFunction()">Log Off</a>
+					  	<a href="#">Manage Profile</a>
+					  	<a href="#!support">Support</a>
+					  	<a href="#" >{{useremail}}</a>
+					  	<a href="javascript:void(0);" class="icon" onclick="myuserFunction()">
+					    	<i class="fa fa-bars"></i>
+					  	</a>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div ng-view>
+		<!--<section   ng-controller= "homeCtrl">
+			<div class="container">
+				<div class="row">
+			    	<div class="col-sm-8">
+			      		<h1>Cloud-Enabled Agents</h1>
+			      		<h2>{{message}}</h2>
+			      		<p>With cloud based agents you can manage agent machines that are never on the same network as your console.
+			      		<p class="inbox2">Your agents can check in and receive policy updates from the cloud, and you can install an agent using the cloud.</p>
+			    	</div>
+			    	<div class="col-sm-4 inbox">
+			      		        
+			      		<div class="form-group">
+			      			<div class="input-group">
+			      				<h3>Sign In</h3>
+			      			</div>
+		            		<div class="input-group">
+		              			<input type="text" class="form-control" name="username" placeholder="Username" ng-model="email" required="required">        
+		            		</div>
+		            	</div>
+
+		          		<div class="form-group">
+            				<div class="input-group">
+              					<input type="password" class="form-control" name="password" placeholder="Password" ng-model="password" required="required">       
+            				</div>
+          				</div>  
+          				<div class="form-group">
+            				<button type="submit" ng-click="loginFunction()" class="btn btn-primary login-btn btn-block" style="background-color:#87CEFA;">Sign in</button>
+          				</div>
+
+          				<div class="form-group">
+			      			<div class="input-group">
+			      				<p>Forgot your password?</p>
+			      				<p>Complete password Reset (For testing only)</p>
+			      				<p>Don't have an account yet. Register now.</p>
+			      			</div>
+			      		</div>
+			    	</div>
+			  	</div>
+			</div>
+			<nav class="topnav" id="myTopnav">
+				<a href="#home" class="col-sm-3">How to get it</a>
+			  	<a href="#news" class="col-sm-3">Support</a>
+			  	<a href="#contact" class="col-sm-3">Training</a>
+			  	<a href="#about" class="col-sm-3">Other Links</a>
+			  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			    	<i class="fa fa-bars"></i>
+			  	</a>
+			</nav>
+
+		</section>-->
+		</div>
+		<section >
+			<nav class="topnav" id="myTopnav">
+				<a href="#!home" class="col-sm-3">How to get it</a>
+			  	<a href="#!support" class="col-sm-3">Support</a>
+			  	<a href="#" class="col-sm-3">Training</a>
+			  	<a href="#" class="col-sm-3">Other Links</a>
+			  	<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			    	<i class="fa fa-bars"></i>
+			  	</a>
+			</nav>
+
+		</section>
+		
+		<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+function myuserFunction() {
+	console.log('in my user function.');
+  var x = document.getElementById("myusernav");
+  if (x.className === "usernav") {
+    x.className += " responsive";
+  } else {
+    x.className = "usernav";
+  }
+}
+</script>
+
+	</body>
+
+</html> 
